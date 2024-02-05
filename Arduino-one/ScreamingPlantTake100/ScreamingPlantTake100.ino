@@ -55,21 +55,21 @@ void loop() {
   //Reading from soil moisture sensor  
   sensor_analog = analogRead(sensor_pin);
   //Readable data for moisture
-  //_moisture = ( 100 - ( (sensor_analog/4095.00) * 100 ) );
-  //_moisture = map(sensor_analog,550,0,0,100);
+  _moisture = ( 100 - ( (sensor_analog/4095.00) * 100 ) );
+  _moisture = map(sensor_analog,550,0,0,100);
 
   //Will print the temperature
-  //Serial.println("Temp " + String(data.temperature, 2) + "°C");
+  Serial.println("Temp " + String(data.temperature, 2) + "°C");
   //Will print the humidity
-  //Serial.println("Humidity " + String(data.humidity, 2) + "%");
+  Serial.println("Humidity " + String(data.humidity, 2) + "%");
   //Will print the moisture
-  //Serial.print("Moisture: ");
-  //Serial.println(_moisture);
+  Serial.print("Moisture: ");
+  Serial.println(_moisture);
   //Delay of 2 secs
-  //delay(2000);
+  delay(2000);
 
-  //if temp conditions are met everything is good
-  /*
+  if temp conditions are met everything is good
+  
   if((data.temperature < 70) && (data.temperature > 15))
   {
     Serial.println("Temp good");
@@ -107,7 +107,6 @@ void loop() {
     Serial.println("Moisture wrong!!");
             // Set to play
   }
-  */
  
   
 }
